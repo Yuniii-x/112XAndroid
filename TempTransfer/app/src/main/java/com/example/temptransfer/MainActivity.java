@@ -1,4 +1,4 @@
-package com.example.edittextdemo;
+package com.example.temptransfer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,10 +17,11 @@ public class MainActivity extends AppCompatActivity {
 
     public  void buttton_Click(View view)
     {
-        EditText editName = (EditText) findViewById(R.id.editName);
+        EditText editTemp = (EditText) findViewById(R.id.editTemp);
         TextView txvShow = (TextView) findViewById(R.id.txvShow);
-        String name = editName.getText().toString();
-        txvShow.setText("你的名字：" + name);
+        double degreeC = Double.parseDouble(editTemp.getText().toString());
+        double degreeF = (9.0 * degreeC) / 5.0 + 32.0;
 
+        txvShow.setText("華氏溫度：" + String.format("%.2f" , degreeF));
     }
 }
