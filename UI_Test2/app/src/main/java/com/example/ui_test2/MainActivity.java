@@ -1,4 +1,4 @@
-package com.example.ui_test;
+package com.example.ui_test2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         EditText edtInput = (EditText)  findViewById(R.id.edtInput);
         String string2Send = edtInput.getText().toString();
 
-        Intent intent = new Intent(this, DisplayStringActivity.class);
+        Intent intent = new Intent(this, com.example.ui_test2.DisplayStringActivity.class);
         intent.putExtra("userInput",string2Send);
         startActivity(intent);
     }
